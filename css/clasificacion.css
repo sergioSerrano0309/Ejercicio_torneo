@@ -1,0 +1,115 @@
+body
+{
+    max-width: 2000px;
+    background-color: rgb(162, 9, 42);
+    color: white;
+    position: relative;
+}
+
+h1
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 35px;
+}
+
+li
+{
+    background-color: white;
+    color: rgb(162, 9, 42);
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.categoria
+{
+    font-size: 25px;
+    margin-top: 2%;  
+    
+    float: left;
+}
+
+.categoria1
+{
+    position: absolute;
+    left: 5%;
+}
+
+.categoria2
+{
+    position: absolute;
+    left: 30%;  
+}
+
+.categoria3
+{
+    position: absolute;
+    left: 55%;
+}
+
+.categoria4
+{
+    position: absolute;
+    left: 80%;
+}
+
+.cuartos
+{
+    position: absolute;
+    left: 1%;
+    margin-top: 12%;
+
+
+}
+.cuarto
+{
+    font-size: 22px;
+    width: 150px;
+    margin-bottom: 120px;
+}
+.semifinales
+{
+    margin-top: 12%;
+    max-width: 25%;
+    position: absolute;
+    top: 160px;
+    left: 28%;
+}
+.semi
+{
+    font-size: 22px;
+    width: 150px;
+    margin-bottom: 300px;
+}
+
+.finales
+{   
+
+    max-width: 25%;
+    position: absolute;
+    top: 575px;
+    left: 50%;
+}
+
+.final
+{
+    font-size: 22px;
+    width: 150px;
+
+}
+
+.campeon
+{
+    background-color: white;
+    color: rgb(162, 9, 42);
+    max-width: 25%;
+    position: absolute;
+    top: 615px;
+    left: 80%;
+    font-size: 22px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+}
