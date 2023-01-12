@@ -1,0 +1,77 @@
+body
+{
+    background-color:rgb(120, 10, 33);
+    position: relative;
+    
+}
+
+.cajaSesión
+{
+    
+    background: #d93455;
+    background-image: -webkit-linear-gradient(top, #d93455, #b82b63);
+    background-image: -moz-linear-gradient(top, #d93455, #b82b63);
+    background-image: -ms-linear-gradient(top, #d93455, #b82b63);
+    background-image: -o-linear-gradient(top, #d93455, #b82b63);
+    background-image: linear-gradient(to bottom, #d93455, #b82b63);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #ffffff 5px;
+    border-radius: 50px 0px 50px 0px;
+
+    text-decoration: none;
+
+    width: 30%;
+    max-width: 400px;
+
+    position: absolute;
+    left: 38%;
+    top: 200px;
+}
+
+form
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px;
+}
+input
+{
+    font-size: 20px;
+}
+
+
+.boton {
+	background:linear-gradient(to bottom, #d93455 5%, #b82b64 100%);
+	background-color:#d93455;
+	border:4px solid #ffffff;
+    border-radius: 0px 20px 0px 20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.boton:hover {
+	background:linear-gradient(to bottom, #a29399 5%, #fef8fa 100%);
+	background-color:#b82b64;
+    color: #b82b64;
+    
+    
+}
+.boton:active {
+	position:relative;
+	top:2px;
+    box-shadow:inset 0px 0px 11px 10px #cc75b1;
+}
