@@ -14,7 +14,7 @@ class TorneosAccesoDatos
 		$conexion = mysqli_connect('127.0.0.1','root','12345');
 		if (mysqli_connect_errno())
 		{
-				echo "Error al conectar a MySQL: ". mysqli_connect_error();
+			echo "Error al conectar a MySQL: ". mysqli_connect_error();
 		}
  		mysqli_select_db($conexion, 'torneosTenisMesaBD');
 		$consulta = mysqli_prepare($conexion, "SELECT ID, NOMBRE, FECHA, ESTADO, CAMPEON FROM T_Torneos ");

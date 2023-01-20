@@ -6,6 +6,9 @@ class TorneosReglasNegocio
 {
     private $_ID;
     private $_NOMBRE;
+    private $_FECHA;
+    private $_ESTADO;
+    private $_CAMPEON;
 
 	function __construct()
     {
