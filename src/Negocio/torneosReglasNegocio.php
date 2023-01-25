@@ -1,6 +1,6 @@
 <?php
 
-require("torneosAccesoDatos.php");
+require("../AccesoDatos/torneosAccesoDatos.php");
 
 class TorneosReglasNegocio
 {
@@ -12,6 +12,7 @@ class TorneosReglasNegocio
 
 	function __construct()
     {
+
     }
 
     function init($id, $nombre, $fecha, $estado, $campeon)

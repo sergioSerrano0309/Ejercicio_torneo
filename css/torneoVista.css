@@ -83,3 +83,21 @@ td
 	top:2px;
     box-shadow:inset 0px 0px 11px 10px #cc75b1;
 }
+a
+{
+    text-decoration: none;
+    color: azure;
+}
+.ver:hover
+{
+    color: #ff64f7;
+}
+
+.ver:active
+{
+    position:relative;
+	top:2px;
+    box-shadow:inset 0px 0px 11px 10px #cc75b1;
+}
+
+

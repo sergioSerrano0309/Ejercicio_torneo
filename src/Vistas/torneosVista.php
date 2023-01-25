@@ -3,11 +3,11 @@
 <head>
 
 </head>
-<link rel="stylesheet" href="../css/torneoVista.css">
+<link rel="stylesheet" href="../../css/torneoVista.css">
 <body>
     <h1> Listado de Torneos </h1>
     <?php
-        require("torneosReglasNegocio.php");
+        require("../Negocio/torneosReglasNegocio.php");
 
         $torneosBL = new TorneosReglasNegocio();
         $datosTorneos = $torneosBL->obtener();
