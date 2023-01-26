@@ -1,4 +1,5 @@
 <?php
+$error = false;
 ini_set('display_errors', 'On');
 ini_set('html_errors', 0);
 require ("../Negocio/usuarioReglasNegocio.php");
@@ -46,8 +47,12 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
         <label for="Contraseña">Contraseña</label><br><br>
         <input type="password" id="contraseña" name="contraseña" value=""><br><br>
         <input class="boton" type="submit" value="Confirmar">
-        <p><a href="torneosVista.php">Vista Torneo Admin</a></p>
-        <p><a href="listaTorneosVistaJugador.php">Vista Torneo Jugador</a></p>
+        <?php 
+        if($error == true)
+        {
+            echo "<p class='error'>Error al iniciar sesión</p>";
+        } 
+        ?>
     </form> 
     </div>
 </body>

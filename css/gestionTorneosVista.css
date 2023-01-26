@@ -2,20 +2,18 @@ body
 {
     background-color:rgb(120, 10, 33);
     position: relative;
-    
+
 }
 
-.cajaSesión
+.cajaSesion
 {
-    
+
     background: #d93455;
-    background-image: -webkit-linear-gradient(top, #d93455, #b82b63);
-    background-image: -moz-linear-gradient(top, #d93455, #b82b63);
-    background-image: -ms-linear-gradient(top, #d93455, #b82b63);
-    background-image: -o-linear-gradient(top, #d93455, #b82b63);
+    background-image: linear-gradient(top, #d93455, #b82b63);
+    background-image: linear-gradient(top, #d93455, #b82b63);
+    background-image: linear-gradient(top, #d93455, #b82b63);
+    background-image: linear-gradient(top, #d93455, #b82b63);
     background-image: linear-gradient(to bottom, #d93455, #b82b63);
-    -webkit-border-radius: 10;
-    -moz-border-radius: 10;
     box-shadow: 4px 4px 60px 10px rgb(46, 4, 13);;
 
     font-family: Arial;
@@ -46,7 +44,7 @@ form
     text-align: center;
     font-weight: bolder;
     padding: 20px;
-    
+    padding-top: 30px;
 }
 input
 {

@@ -13,7 +13,7 @@
         $datosTorneos = $torneosBL->obtener();
 
         echo "<div class='registros'>Número de registros: ".count($datosTorneos)."</div>";
-
+        echo "<a href='logout.php' class = 'cerrarSesion'>Cerrar sesión</a>";
         echo "<table>";
             echo "<tr>";
                 echo "<td class='titulo'>ID</td>";

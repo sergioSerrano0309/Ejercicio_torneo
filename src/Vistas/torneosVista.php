@@ -12,7 +12,8 @@
         $torneosBL = new TorneosReglasNegocio();
         $datosTorneos = $torneosBL->obtener();
         
-        echo "<a  href=''><div class='crearTorneo'>crear torneo</div></a><div class='registros'>Número de registros: ".count($datosTorneos)."</div>";
+        echo "<a  href='gestionTorneosVista.php'><div class='crearTorneo'>crear torneo</div></a><div class='registros'>Número de registros: ".count($datosTorneos)."</div>";
+        echo "<a href='logout.php' class = 'cerrarSesion'>Cerrar sesión</a>";
         echo "<table>";
             echo "<tr>";
                 echo "<td class='titulo'>ID</td>";
