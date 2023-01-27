@@ -27,4 +27,5 @@ class UsuarioReglasNegocio
         }
         return $res;
     }
+    
 }

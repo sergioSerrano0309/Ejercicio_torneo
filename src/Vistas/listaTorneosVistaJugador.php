@@ -20,6 +20,7 @@
                 echo "<td class='titulo'>Nombre del Torneo</td>";
                 echo "<td class='titulo'>Fecha</td>";
                 echo "<td class='titulo'>Estado</td>";
+                echo "<td class='titulo'>Jugadores</td>";
                 echo "<td class='titulo'>Campeón</td>";
                 echo "<td class='titulo'></td>";
             echo "</tr>";
@@ -33,6 +34,7 @@
                     echo "<td>".($torneo->getNombre())."</td>";
                     echo "<td>".($torneo->getFecha())."</td>";
                     echo "<td>".($torneo->getEstado())."</td>";
+                    echo "<td>".($torneo->getJugadores())."</td>";
                     echo "<td>".($torneo->getCampeon())."</td>";
                     echo "<td><a href=''><div class='ver'>Ver</div></a></td>";
                 echo "</tr>";

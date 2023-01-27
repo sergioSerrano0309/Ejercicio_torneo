@@ -97,7 +97,19 @@ a
 {
     position:relative;
 	top:2px;
-    box-shadow:inset 0px 0px 11px 10px #cc75b1;
+    color: #9513bd;
+}
+
+.borrar:hover
+{
+    color: #ff64f7;
+}
+
+.borrar:active
+{
+    position:relative;
+	top:2px;
+    color: #9513bd;
 }
 
 .cerrarSesion

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class = 'cajaSesion'>
-        <from method = "POST" action="torneosVistaAdministrador.php">
+        <from method = "POST" action="torneosVista.php">
             <label for="Usuario">Nombre del Torneo</label><br><br>
             <input type="text" id="nombre" name="nombre" value=""><br><br>
             <label for="fecha">Fecha</label><br><br>
