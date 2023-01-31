@@ -5,7 +5,7 @@ ini_set('html_errors', 0);
 
 require ("../Negocio/torneosReglasNegocio.php");
 
- if ($_SERVER["REQUEST_METHOD"]=="POST")
+if ($_SERVER["REQUEST_METHOD"]=="POST")
 { 
     $torneoNuevo = new TorneosReglasNegocio();
     $nombre = $_POST["nombre"];

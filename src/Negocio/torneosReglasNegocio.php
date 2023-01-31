@@ -81,4 +81,10 @@ class TorneosReglasNegocio
         $nuevoTorneoAccesoDatos = new TorneosAccesoDatos();
         $res = $nuevoTorneoAccesoDatos->insertarTorneo($nombre, $fecha);
     }
+
+    function borrarTorneo($id)
+    {
+        $torneoBorrado = new TorneosAccesoDatos();
+        $res = $torneoBorrado->borrarTorneo($id);
+    }
 }
