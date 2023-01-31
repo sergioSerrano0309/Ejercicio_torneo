@@ -1,5 +1,6 @@
 <?php
-
+ini_set('display_errors', 'On');
+ini_set('html_errors', 0);
 require("../AccesoDatos/torneosAccesoDatos.php");
 
 class TorneosReglasNegocio
@@ -77,7 +78,7 @@ class TorneosReglasNegocio
 
     function insertarTorneo($nombre, $fecha)
     {
-        $nuevoTorneoAccesoDatos = new TorneoAccesoDatos();
+        $nuevoTorneoAccesoDatos = new TorneosAccesoDatos();
         $res = $nuevoTorneoAccesoDatos->insertarTorneo($nombre, $fecha);
     }
 }

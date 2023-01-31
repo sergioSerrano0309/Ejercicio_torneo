@@ -1,3 +1,21 @@
+<?php
+$error = false;
+ini_set('display_errors', 'On');
+ini_set('html_errors', 0);
+
+require ("../Negocio/torneosReglasNegocio.php");
+
+ if ($_SERVER["REQUEST_METHOD"]=="POST")
+{ 
+    $torneoNuevo = new TorneosReglasNegocio();
+    $nombre = $_POST["nombre"];
+    $fecha = $_POST["fecha"];
+
+    $torneoNuevo->insertarTorneo($nombre, $fecha); 
+    header("Location: torneosVista.php");                                              
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +27,13 @@
 </head>
 <body>
     <div class = 'cajaSesion'>
-        <from method = "POST" action="torneosVista.php">
+        <form method = "POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <label for="Usuario">Nombre del Torneo</label><br><br>
             <input type="text" id="nombre" name="nombre" value=""><br><br>
             <label for="fecha">Fecha</label><br><br>
-            <input type="text" id="fecha" name="fecha" value=""><br><br>
+            <input type="date" id="fecha" name="fecha" value=""><br><br>
             <input class="boton" type="submit" value="Confirmar">
-        </from>
+        </form>
     </div>
 </body>
 </html>

@@ -39,7 +39,10 @@ class TorneosAccesoDatos
 			echo "Error al conectar a MySQL: ". mysqli_connect_error();
 		}
  		mysqli_select_db($conexion, 'torneosTenisMesaBD');
-		$consulta = mysqli_prepare($conexion, "INSERT INTO T_Torneos (nombre, fecha) values ($nombre, $fecha)");
-        $consulta->execute();
+		$consulta = mysqli_prepare($conexion, "INSERT INTO T_Torneos (nombre, fecha) values ('$nombre', '$fecha')");
+        $res = $consulta->execute();
+
+		return $res;
 	}
+
 }

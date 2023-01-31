@@ -9,15 +9,6 @@
     <?php
         require("../Negocio/torneosReglasNegocio.php");
 
-        if ($_SERVER["REQUEST_METHOD"]=="POST")
-        {
-            $nombre = $_POST["nombre"];
-            $fecha = $_POST["fecha"];
-
-            echo $nombre;
-            echo $fecha;
-            header("Location: torneosReglasNegocio.php");
-        }                                                   
 
         $torneosBL = new TorneosReglasNegocio();
         $datosTorneos = $torneosBL->obtener();
@@ -42,8 +33,8 @@
                     echo "<td>".($torneo->getFecha())."</td>";
                     echo "<td>".($torneo->getEstado())."</td>";
                     echo "<td>".($torneo->getCampeon())."</td>";
-                    echo "<td><a class='ver' href=''>Editar</a></td>";
-                    echo "<td><a class='borrar' href='TorneosVista.php' >Borrar</a></td>";
+                    echo "<td><a class='ver' href='EdicionTorneosVista'>Editar</a></td>";
+                    echo "<td><a class='borrar' href='BorrarTorneosVista.php' >Borrar</a></td>";
                 echo "</tr>";
 
             }
