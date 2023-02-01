@@ -10,6 +10,9 @@
 <body>
     <?php
         require("../Negocio/partidosReglasNegocio.php");
+        $partidosBL = new PartidosReglasNegocio();
+        $datosTorneos = $torneosBL->obtener();
+        
         echo "<table>";
             echo "<tr>";
                 echo "<td class='titulo'>ID</td>";
@@ -21,18 +24,17 @@
                 echo "<td class='titulo'></td>";
             echo "</tr>";
             
-            foreach ($datosTorneos as $torneo)
+            foreach ($datosPartidos as $partido)
             {   
                 
                 echo "<tr>";
 
-                    echo "<td>".($torneo->getID())."</td>";
-                    echo "<td>".($torneo->getNombre())."</td>";
-                    echo "<td>".($torneo->getFecha())."</td>";
-                    echo "<td>".($torneo->getEstado())."</td>";
-                    echo "<td>".($torneo->getJugadores())."</td>";
-                    echo "<td>".($torneo->getCampeon())."</td>";
-                    echo "<td><a href='listaPartidosVistaJugador.php'><div class='ver'>Ver</div></a></td>";
+                    echo "<td>".($partido->getID())."</td>";
+                    echo "<td>".($partido->getNombre())."</td>";
+                    echo "<td>".($partido->getFecha())."</td>";
+                    echo "<td>".($partido->getEstado())."</td>";
+                    echo "<td>".($partido->getJugadores())."</td>";
+                    echo "<td>".($partido->getCampeon())."</td>";
                 echo "</tr>";
             }
             
