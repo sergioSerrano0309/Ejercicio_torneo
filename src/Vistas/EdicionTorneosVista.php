@@ -10,7 +10,33 @@
 <body>
     <?php
         require("../Negocio/partidosReglasNegocio.php");
-        
+        echo "<table>";
+            echo "<tr>";
+                echo "<td class='titulo'>ID</td>";
+                echo "<td class='titulo'>Nombre del Torneo</td>";
+                echo "<td class='titulo'>Fecha</td>";
+                echo "<td class='titulo'>Estado</td>";
+                echo "<td class='titulo'>Jugadores</td>";
+                echo "<td class='titulo'>Campeón</td>";
+                echo "<td class='titulo'></td>";
+            echo "</tr>";
+            
+            foreach ($datosTorneos as $torneo)
+            {   
+                
+                echo "<tr>";
+
+                    echo "<td>".($torneo->getID())."</td>";
+                    echo "<td>".($torneo->getNombre())."</td>";
+                    echo "<td>".($torneo->getFecha())."</td>";
+                    echo "<td>".($torneo->getEstado())."</td>";
+                    echo "<td>".($torneo->getJugadores())."</td>";
+                    echo "<td>".($torneo->getCampeon())."</td>";
+                    echo "<td><a href='listaPartidosVistaJugador.php'><div class='ver'>Ver</div></a></td>";
+                echo "</tr>";
+            }
+            
+        echo "</table>"
     ?>
 </body>
 </html>
