@@ -11,8 +11,9 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     $nombre = $_POST["nombre"];
     $fecha = $_POST["fecha"];
 
-    $torneoNuevo->insertarTorneo($nombre, $fecha); 
-    header("Location: torneosVista.php");                                              
+    $torneoNuevo->insertarTorneo($nombre, $fecha);
+    
+    header("Location: torneosVista.php");                                             
 }
 ?>
 

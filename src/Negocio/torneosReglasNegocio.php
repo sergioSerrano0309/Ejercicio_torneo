@@ -2,6 +2,8 @@
 ini_set('display_errors', 'On');
 ini_set('html_errors', 0);
 require("../AccesoDatos/torneosAccesoDatos.php");
+require("../AccesoDatos/jugadoresAccesoDatos.php");
+require("../AccesoDatos/partidosAccesoDatos.php");
 
 class TorneosReglasNegocio
 {
@@ -80,11 +82,49 @@ class TorneosReglasNegocio
     {
         $nuevoTorneoAccesoDatos = new TorneosAccesoDatos();
         $res = $nuevoTorneoAccesoDatos->insertarTorneo($nombre, $fecha);
+
+        $jugadores = new JugadoresAccesoDatos();
+        $resJ = $jugadores->obtener();
+        shuffle($resJ);
+        
+        $jugadoresR = array_chunk($resJ, 2, true);
+        
+        $j = 0;
+
+        for($i = 0; $i<= 3; $i++)
+        {   
+            
+
+            $jugadorA = $jugadoresR[$i][$j];
+
+            $j++;
+
+            $nombreJugadorA = $jugadorA["NOMBRE"];
+
+            //echo $nombreJugadorA;
+
+            $jugadorB = $jugadoresR[$i][$j];
+
+            $nombreJugadorB = $jugadorB["NOMBRE"];
+
+            $j++;
+            //echo $nombreJugadorB;
+
+            //int(59) array(6) { ["ID"]=> int(2) ["NOMBRE"]=> string(14) "Michael Jordan" ["PARTIDOSJUGADOS"]=> int(0) ["PARTIDOSGANADOS"]=> int(0) ["TORNEOSDISPUTADOS"]=> int(0) ["TORNEOSGANADOS"]=> int(0) } 
+
+
+            $partido = new PartidosAccesoDatos();
+
+            $resP = $partido->insertarPartidos($res, $nombreJugadorA, $nombreJugadorB); 
+            
+        }
+
     }
 
     function borrarTorneo($id)
     {
         $torneoBorrado = new TorneosAccesoDatos();
         $res = $torneoBorrado->borrarTorneo($id);
+        
     }
 }

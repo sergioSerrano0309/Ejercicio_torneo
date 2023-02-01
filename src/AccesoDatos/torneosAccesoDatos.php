@@ -41,8 +41,11 @@ class TorneosAccesoDatos
  		mysqli_select_db($conexion, 'torneosTenisMesaBD');
 		$consulta = mysqli_prepare($conexion, "INSERT INTO T_Torneos (nombre, fecha) values ('$nombre', '$fecha')");
         $res = $consulta->execute();
+		$idNuevoTorneo = mysqli_insert_id($conexion);
 
-		return $res;
+		var_dump($idNuevoTorneo);
+		return $idNuevoTorneo;
+		
 	}
 
 	function borrarTorneo($id)
