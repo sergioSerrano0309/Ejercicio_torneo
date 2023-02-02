@@ -23,7 +23,7 @@ class PartidosAccesoDatos
 		return $res;
 	}
 
-	function obtener()
+	function obtener($torneoId)
 	{
 		$conexion = mysqli_connect('127.0.0.1','root','12345');
 		if (mysqli_connect_errno())
@@ -31,7 +31,7 @@ class PartidosAccesoDatos
 			echo "Error al conectar a MySQL: ". mysqli_connect_error();
 		}
  		mysqli_select_db($conexion, 'torneosTenisMesaBD');
-		$consulta = mysqli_prepare($conexion, "SELECT ID, JUGADORA, JUGADORB, RONDA, GANADOR FROM T_Partidos ");
+		$consulta = mysqli_prepare($conexion, "SELECT ID, JUGADORA, JUGADORB, RONDA, GANADOR FROM T_Partidos WHERE torneoId = $torneoId");
         $consulta->execute();
         $result = $consulta->get_result();
 

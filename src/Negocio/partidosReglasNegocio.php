@@ -1,7 +1,7 @@
 <?php
 require("../AccesoDatos/partidosAccesoDatos.php");
 
-class TorneosReglasNegocio
+class PartidosReglasNegocio
 {
     private $_ID;
     private $_JUGADORA;
@@ -48,10 +48,10 @@ class TorneosReglasNegocio
         return $this->_GANADOR;
     }
 
-    function obtener()
+    function obtener($torneoId)
     {
         $partidosDAL = new PartidosAccesoDatos();
-        $rs = $partidosDAL->obtener();
+        $rs = $partidosDAL->obtener($torneoId);
 
 		$listaPartidos =  array();
 
