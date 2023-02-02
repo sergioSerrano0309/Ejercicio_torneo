@@ -9,10 +9,11 @@
 </head>
 <body>
     <?php 
-     $id = $_GET["id"];
-     echo "<h1>Seguro que quieres Borrar este Torneo?</h1>";
-     echo "<a class='boton' href='torneosVista.php'>Cancelar</a><br><br>";
-     echo "<a class='boton' href = 'ConfirmarBorrarTorneoVista.php?id=".$id."'>Confirmar</a><br><br>";
+     $torneoId = $_GET["torneoId"];
+     $partidoId = $_GET["partidoId"];
+     echo "<h1>Seguro que quieres Borrar este Partido?</h1>";
+     echo "<a class='boton' href='EdicionTorneosVista.php?id=$torneoId'>Cancelar</a><br><br>";
+     echo "<a class='boton' href = 'ConfirmarBorrarPartidoVista.php?id=".$partidoId."'>Confirmar</a><br><br>";
      echo "<a href='logout.php' class = 'cerrarSesion'>Cerrar sesión</a>";   
     ?>
    

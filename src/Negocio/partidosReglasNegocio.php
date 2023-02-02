@@ -66,5 +66,12 @@ class PartidosReglasNegocio
         return $listaPartidos;
         
     }
+
+    function borrarPartido($id)
+    {
+        $partidoBorrado = new PartidosAccesoDatos();
+        $res = $partidoBorrado->borrarPartido($id);
+        
+    }
 }
 ?>

@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     <link rel="stylesheet" href="../../css/gestionTorneosVista.css">
 </head>
 <body>
+    <a href='logout.php' class = 'cerrarSesion'>Cerrar sesión</a>
     <div class = 'cajaSesion'>
         <form method = "POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <label for="Usuario">Nombre del Torneo</label><br><br>

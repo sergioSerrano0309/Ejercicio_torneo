@@ -79,3 +79,36 @@ input
 	top:2px;
     box-shadow:inset 0px 0px 11px 10px #cc75b1;
 }
+
+.cerrarSesion
+{
+    position: absolute;
+    background:linear-gradient(to bottom, #d93455 5%, #b82b64 100%);
+	background-color:#d93455;
+	border:4px solid #ffffff;
+    border-radius: 20px 20px 20px 20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cerrarSesion:hover
+{
+    background:linear-gradient(to bottom, #a29399 5%, #fef8fa 100%);
+	background-color:#b82b64;
+    color: #b82b64;
+}
+
+.cerrarSesion:active
+{
+    
+	top:15px;
+    box-shadow:inset 0px 0px 11px 10px #cc75b1;
+} 
+
