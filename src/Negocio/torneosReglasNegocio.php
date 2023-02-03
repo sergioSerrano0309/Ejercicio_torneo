@@ -83,8 +83,8 @@ class TorneosReglasNegocio
         $nuevoTorneoAccesoDatos = new TorneosAccesoDatos();
         $res = $nuevoTorneoAccesoDatos->insertarTorneo($nombre, $fecha);
 
-        $jugadores = new JugadoresAccesoDatos();
-        $resJ = $jugadores->obtener();
+        $jugadores = new JugadorAccesoDatos();
+        $resJ = $jugadores->obtenerJugadores();
         shuffle($resJ);
         
         $jugadoresR = array_chunk($resJ, 2, true);

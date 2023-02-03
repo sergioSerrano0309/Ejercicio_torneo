@@ -13,7 +13,7 @@
      $partidoId = $_GET["partidoId"];
      echo "<h1>Seguro que quieres Borrar este Partido?</h1>";
      echo "<a class='boton' href='EdicionTorneosVista.php?id=$torneoId'>Cancelar</a><br><br>";
-     echo "<a class='boton' href = 'ConfirmarBorrarPartidoVista.php?id=".$partidoId."'>Confirmar</a><br><br>";
+     echo "<a class='boton' href = 'ConfirmarBorrarPartidoVista.php?id=".$partidoId."&torneoId=$torneoId'>Confirmar</a><br><br>";
      echo "<a href='logout.php' class = 'cerrarSesion'>Cerrar sesión</a>";   
     ?>
    

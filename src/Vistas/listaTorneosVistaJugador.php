@@ -36,7 +36,7 @@
                     echo "<td>".($torneo->getEstado())."</td>";
                     echo "<td>".($torneo->getJugadores())."</td>";
                     echo "<td>".($torneo->getCampeon())."</td>";
-                    echo "<td><a href='listaPartidosVistaJugador.php'><div class='ver'>Ver</div></a></td>";
+                    echo "<td><a href='listaPartidosVistaJugador.php?id=".($torneo->getID())."'><div class='ver'>Ver</div></a></td>";
                 echo "</tr>";
             }
             

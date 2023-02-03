@@ -14,7 +14,6 @@
         $torneoId = $_GET["id"];
         $datosPartidos = $partidosBL->obtener($torneoId);
         
-        echo "<a  href='CrearPartidosVista.php'><div class='crearTorneo'>crear partido</div></a><div class='registros'>Número de registros: ".count($datosPartidos)."</div>";
         echo "<a href='logout.php' class = 'cerrarSesion'>Cerrar sesión</a>";
 
         echo "<table>";
@@ -24,8 +23,6 @@
                 echo "<td class='titulo'>Jugador B</td>";
                 echo "<td class='titulo'>Fase</td>";
                 echo "<td class='titulo'>Ganador</td>";
-                echo "<td class='titulo'>Edición</td>";
-                echo "<td class='titulo'>Borrar</td>";
             echo "</tr>";
             
             foreach ($datosPartidos as $partido)
@@ -37,8 +34,6 @@
                     echo "<td><a href='PlantillaJugadorVista.phpnombreJugador=".($partido->getJugadorB())."'>".($partido->getJugadorB())."</td>";
                     echo "<td>".($partido->getRonda())."</td>";
                     echo "<td>".($partido->getGanador())."</td>";
-                    echo "<td><a class='ver' href='EdicionPartidosVista.php?id=".($partido->getID())."'>Editar</a></td>";
-                    echo "<td><a class='borrar' href='BorrarPartidosVista.php?torneoId=".($torneoId)."&partidoId=".($partido->getID())."' >Borrar</a></td>";
                 echo "</tr>";
             }
             
