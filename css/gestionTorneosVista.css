@@ -26,7 +26,7 @@ body
     text-decoration: none;
 
     width: 30%;
-    max-width: 400px;
+    width: 400px;
 
     position: absolute;
     left: 38%;
@@ -45,6 +45,7 @@ form
     font-weight: bolder;
     padding: 20px;
     padding-top: 30px;
+    
 }
 input
 {
@@ -111,4 +112,58 @@ input
 	top:15px;
     box-shadow:inset 0px 0px 11px 10px #cc75b1;
 } 
-
+.crearPartido
+{
+    width: 2000px;
+    margin-left: -750px;
+    height: 200px;
+}
+select 
+{ 
+    position: absolute;
+    background:linear-gradient(to bottom, #d93455 5%, #b82b64 100%);
+	background-color:#d93455;
+	border:4px solid #ffffff;
+    border-radius: 20px 20px 20px 20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.formularioCrearPartido
+{
+    text-align: left;
+}
+.jugadorB
+{
+    position: absolute;
+    left: 500px;
+    top: 40px;
+}
+.ronda
+{
+    position: absolute;
+    left: 1000px;
+    top: 40px;
+}
+.ganador
+{
+    position: absolute;
+    left: 1400px;
+    top: 40px;
+}
+.botonPartidos
+{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+}
+.botonPartidos:active
+{
+    top: 64px;
+}

@@ -115,7 +115,7 @@ class TorneosReglasNegocio
 
             $partido = new PartidosAccesoDatos();
 
-            $resP = $partido->insertarPartidos($res, $nombreJugadorA, $nombreJugadorB); 
+            $resP = $partido->insertarPartidosAuto($res, $nombreJugadorA, $nombreJugadorB); 
             
         }
 

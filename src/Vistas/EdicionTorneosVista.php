@@ -14,7 +14,7 @@
         $torneoId = $_GET["id"];
         $datosPartidos = $partidosBL->obtener($torneoId);
         
-        echo "<a  href='CrearPartidosVista.php'><div class='crearTorneo'>crear partido</div></a><div class='registros'>Número de registros: ".count($datosPartidos)."</div>";
+        echo "<a  href='CrearPartidosVista.php?id=$torneoId'><div class='crearTorneo'>crear partido</div></a><div class='registros'>Número de registros: ".count($datosPartidos)."</div>";
         echo "<a href='logout.php' class = 'cerrarSesion'>Cerrar sesión</a>";
 
         echo "<table>";
@@ -34,7 +34,7 @@
                 echo "<tr>";
                     echo "<td>".($partido->getID())."</td>";
                     echo "<td><a href='PlantillaJugadorVista.php?nombreJugador=".($partido->getJugadorA())."'>".($partido->getJugadorA())."</a></td>";
-                    echo "<td><a href='PlantillaJugadorVista.phpnombreJugador=".($partido->getJugadorB())."'>".($partido->getJugadorB())."</td>";
+                    echo "<td><a href='PlantillaJugadorVista.php?nombreJugador=".($partido->getJugadorB())."'>".($partido->getJugadorB())."</td>";
                     echo "<td>".($partido->getRonda())."</td>";
                     echo "<td>".($partido->getGanador())."</td>";
                     echo "<td><a class='ver' href='EdicionPartidosVista.php?id=".($partido->getID())."'>Editar</a></td>";

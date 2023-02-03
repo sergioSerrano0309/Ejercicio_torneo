@@ -73,4 +73,23 @@ class JugadorReglasNegocio
         return $listaDatosJugador;
         
     }
+
+    function obtenerJugadores()
+    {
+        $jugadorDAL = new JugadorAccesoDatos();
+        $rs = $jugadorDAL->obtenerJugadores();
+
+		$listaDatosJugador =  array();
+
+        foreach ($rs as $jugador)
+        {
+            $oJugadorReglasNegocio = new JugadorReglasNegocio();
+            $oJugadorReglasNegocio->Init($jugador['ID'], $jugador['NOMBRE'], $jugador['PARTIDOSJUGADOS'], $jugador['PARTIDOSGANADOS'], $jugador['TORNEOSDISPUTADOS'], $jugador['TORNEOSGANADOS']);
+            array_push($listaDatosJugador,$oJugadorReglasNegocio);
+         
+        }
+        
+        return $listaDatosJugador;
+        
+    }
 }

@@ -73,5 +73,11 @@ class PartidosReglasNegocio
         $res = $partidoBorrado->borrarPartido($id);
         
     }
+
+    function insertarPartido($jugadorA, $jugadorB, $ronda)
+    {
+        $partidoBorrado = new PartidosAccesoDatos();
+        $res = $partidoBorrado->insertarPartido($jugadorA,$jugadorB,$ronda);
+    }
 }
 ?>
