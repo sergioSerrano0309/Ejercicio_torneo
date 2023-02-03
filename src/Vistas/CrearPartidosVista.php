@@ -9,6 +9,9 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
 { 
     $torneoNuevo = new PartidosReglasNegocio();
     $torneoId = $_GET['id'];
+    $jugadorA = $_POST["jugadorA"];
+    $jugadorB = $_POST["jugadorB"];
+    $ronda = $_POST["ronda"];
     $torneoNuevo->insertarPartido($torneoId, $jugadorA, $jugadorB, $ronda); 
     header("Location: torneosVista.php");   
 
@@ -67,10 +70,10 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
                 </tr>
                 <tr class="ronda">
                     <td>
-                        <label for="Ronda">Ronda</label>
-                        <select id="Ronda" name="Ronda">
+                        <label for="ronda">Ronda</label>
+                        <select id="ronda" name="ronda">
                                 <option value="Cuartos">Cuartos</option>
-                                <option value="Semifinal">Semifinal</option>
+                                <option value="Semifinales">Semifinal</option>
                                 <option value="Final">Final</option>
                         </select>
                     </td>
@@ -78,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
                 <tr class="ganador">
                     <td>
                         <label for="ganador">Ganador</label>
-                        <select id="Ronda" name="Ronda">
+                        <select id="ganador" name="ganador">
                             <option value="nulo"></option>
                             <?php
                                 foreach ($datosJugadores as $jugador) 

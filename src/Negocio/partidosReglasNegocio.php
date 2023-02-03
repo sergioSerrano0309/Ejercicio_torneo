@@ -74,10 +74,10 @@ class PartidosReglasNegocio
         
     }
 
-    function insertarPartido($jugadorA, $jugadorB, $ronda)
+    function insertarPartido($torneoId, $jugadorA, $jugadorB, $ronda)
     {
         $partidoBorrado = new PartidosAccesoDatos();
-        $res = $partidoBorrado->insertarPartido($jugadorA,$jugadorB,$ronda);
+        $res = $partidoBorrado->insertarPartido($torneoId, $jugadorA, $jugadorB, $ronda);
     }
 }
 ?>
